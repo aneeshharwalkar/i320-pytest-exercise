@@ -21,4 +21,13 @@ def test_ten_digits():
     
   with pytest.raises(ValueError):
     fix_phone_num("(3213) 654 3333")
+    
+def test_is_digit():
+  with pytest.raises(ValueError):
+    fix_phone_num("334dfdee45")
+    
+  with pytest.raises(ValueError):
+    fix_phone_num("abcdefghij")
+    
+
   
